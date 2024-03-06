@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emp_info"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/black"
+>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            android:queryHint="Search with name"
+            android:hint="Search with name"
+            android:text="Search with name"
+            android:textAppearance="@font/mulish"
+            app:searchIcon="@drawable/search"
+            android:background="@drawable/search_bar"
+
+            />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_recycler"
+        android:layout_width="402dp"
+        android:layout_height="534dp"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:listitem="@layout/each_employee">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
